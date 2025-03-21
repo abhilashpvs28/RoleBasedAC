@@ -3,6 +3,7 @@ const dotenv = require("dotenv").config();
 const PostG = require("../src/config/db.js");
 const authRoutes = require("../src/routes/authRoutes.js")
 const userRoutes = require("../src/routes/userRoutes.js")
+const departmentRoutes = require("../src/routes/departmentRoutes.js")
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use("/api/auth",authRoutes)
 app.use("/api/user",userRoutes)
+app.use("/api/department", departmentRoutes);
 
 // Start the Server
 
